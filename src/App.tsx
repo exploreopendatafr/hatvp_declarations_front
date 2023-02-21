@@ -6,6 +6,7 @@ function App() {
             <header className="App-header">
                 <p>Havtp declaration front</p>
             </header>
+            <footer>{"Built at: {{BUILD_DATE}}"}</footer>
         </div>
     );
 }
