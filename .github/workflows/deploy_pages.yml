@@ -37,7 +37,7 @@ jobs:
         echo "======="
         echo "=>${github_test}<="
         echo "======="
-        git remote set-url origin https://${github_token}@github.com/${repository}
+        git remote set-url origin https://${{ github.token }}@github.com/${repository}
         npm run deploy
       env:
         user_name: 'github-actions[bot]'
