@@ -4,7 +4,7 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <p>Havtp declaration front </p>
+                <p>Havtp declaration front</p>
             </header>
         </div>
     );
