@@ -5,8 +5,8 @@ function App() {
         <div className="App">
             <header className="App-header">
                 <p>Havtp declaration front</p>
+                <p>{"Built at: {{BUILD_DATE}}"}</p>
             </header>
-            <footer>{"Built at: {{BUILD_DATE}}"}</footer>
         </div>
     );
 }
