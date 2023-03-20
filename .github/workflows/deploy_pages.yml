@@ -30,9 +30,7 @@ jobs:
                   git config --global user.name $user_name
                   git config --global user.email $user_email
                   git remote set-url origin https://${github_token}@github.com/${repository}
-                  grep Built src/App.tsx
                   sed -i "s^{{BUILD_DATE}}^$(date "+%H:%M:%S %d/%m/%Y")^" src/App.tsx
-                  grep Built src/App.tsx
                   npm run deploy
               env:
                   user_name: "github-actions[bot]"

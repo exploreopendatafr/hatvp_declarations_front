@@ -1,0 +1,62 @@
+@import "antd/dist/reset.css";
+
+.logo {
+    float: left;
+    width: 60px;
+    height: 40px;
+    margin: 5px 0;
+    background: url("https://exploreopendatafr.github.io/hatvp_declarations_front/exod_logo_200x200.png") no-repeat;
+    background-size: 40px;
+}
+
+@media only screen and (max-device-width: 480px) {
+    /* Styles pour cette Media Queries */
+
+    .site-layout-content {
+        // total - header - paddingTop - footer
+        min-height: calc(100vh - 50px - 12px - 0px);
+        padding: 8px;
+    }
+
+    .site-content {
+        padding: 0px 12px 0 12px;
+    }
+    .ant-layout .ant-layout-footer {
+        padding: 10px 50px;
+    }
+}
+
+@media only screen and (min-device-width: 480px) {
+    .site-layout-content {
+        // total - header - paddingTop - footer
+        min-height: calc(100vh - 50px - 36px - 36px);
+        padding: 24px;
+    }
+
+    .site-content {
+        padding: 16px 36px 0 36px;
+    }
+
+    .ant-layout .ant-layout-footer {
+        padding: 10px 50px;
+        height: 36px;
+    }
+
+    // .warning-container {
+    //     padding-bottom: 6px;
+    //     height: 20px;
+    // }
+}
+
+.ant-layout .ant-layout-header {
+    height: 50px;
+    line-height: 50px;
+}
+
+.warning-container {
+    color: red;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 6px;
+    height: 20px;
+}
