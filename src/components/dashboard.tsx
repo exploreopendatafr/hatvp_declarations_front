@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Row, Col, Table, Select, Switch } from "antd";
+import { Row, Col, Table, Select } from "antd";
 
 import { hatvp_parser } from "../services/hatvp_gh_parser";
 import { ParsedData, RowData } from "./model";
@@ -20,7 +20,7 @@ export const Dashboard = ({ sourceName, groupbyOptions, groupbyField, columns }:
     // filters
     const [persons, setPersons] = useState<Array<string>>([]);
     const [groupBy, setGroupBy] = useState<Array<string>>([]);
-    const [emptyValue, setEmptyValue] = useState<boolean>(false);
+    // const [emptyValue, setEmptyValue] = useState<boolean>(false);
 
     useEffect(() => {
         setLoading(true);
@@ -28,7 +28,7 @@ export const Dashboard = ({ sourceName, groupbyOptions, groupbyField, columns }:
             .getFile(sourceName)
             .then((result) => setBaseData(result))
             .then(() => setLoading(false));
-    }, []);
+    }, [sourceName]);
 
     useEffect(() => {
         setRowData(
@@ -79,7 +79,7 @@ export const Dashboard = ({ sourceName, groupbyOptions, groupbyField, columns }:
                 }))
             );
         }
-    }, [rowData, persons, emptyValue, groupBy]);
+    }, [rowData, persons, groupBy, groupbyField]);
 
     return (
         <Row justify={"center"} gutter={[16, 16]}>

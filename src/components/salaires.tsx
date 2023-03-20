@@ -1,6 +1,5 @@
 import { Table } from "antd";
 
-import { RowData } from "./model";
 import { Dashboard } from "./dashboard";
 import { sorter, yearlyEuroRender } from "./util";
 

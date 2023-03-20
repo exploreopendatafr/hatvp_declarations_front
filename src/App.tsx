@@ -1,12 +1,12 @@
 import { Routes, Route, Link } from "react-router-dom";
 import { Layout, Menu, theme } from "antd";
-import { FileTextOutlined, GithubOutlined, HomeOutlined } from "@ant-design/icons";
+import { FileTextOutlined, GithubOutlined } from "@ant-design/icons";
 
 import { Home } from "./components/home";
-import "./App.scss";
-import { Dashboard } from "./components/dashboard";
 import { Salaires } from "./components/salaires";
 import { Participations } from "./components/participations";
+
+import "./App.scss";
 
 const { Header, Content, Footer } = Layout;
 
